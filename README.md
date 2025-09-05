@@ -1,6 +1,8 @@
 # PlayfulTitleFilter
 Goal: Extracts playful and unique paper titles from a large dataset of papers
 
+Dataset of 91,919 papers: https://drive.google.com/file/d/1EplQ4rVVPl3VFuV1x_OEfFN4aQwCTcJI/view?usp=sharing
+
 **First Approach**
 
 Initially, I believed filtering out certain keywords would be difficult as there can be a large assortment of writing styles of paper titles and clever ways to write them. That is why I first went down the route of finding a model to create semantic clusters to try to find a cluster that has playful titles. I loaded all of the paper titles into the SentenceTransformer model to create embeddings. As the HDBSCAN clusterer was taking too long, I decided to reduce the embedding dimensions using PCA. Creating these semantic clusters at first seemed like a wise idea because I thought a cluster of silly/funny titles would appear in one of them, however this was not the case. I realized I may have to change gears and give the filtering a more clear direction towards the titles I specifically want instead of hoping playful titles get clustered. 
